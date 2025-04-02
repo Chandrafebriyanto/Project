@@ -1,0 +1,25 @@
+const min1 = 50;
+const max1 = 100;
+
+let randomNum = Math.floor(Math.random()* (max1 - min1)) + min1; //membuat nilai random dengan range 50-100 (math.floor digunakan untuk membulatkan bilangan kebawah, math.random untuk mengacak nilai sesuai dengan range)
+
+console.log(randomNum);
+
+const rollbtn = document.getElementById("rollbtn");
+const mylabel1 = document.getElementById("mylabel1");
+const mylabel2 = document.getElementById("mylabel2");
+const mylabel3 = document.getElementById("mylabel3");
+const min = 1;
+const max = 6;
+let randomNum1;
+let randomNum2;
+let randomNum3;
+
+rollbtn.onclick = function(){
+    randomNum1 = Math.floor(Math.random()* max) + min;
+    randomNum2 = Math.floor(Math.random()* max) + min;
+    randomNum3 = Math.floor(Math.random()* max) + min;
+    mylabel1.textContent = randomNum1;
+    mylabel2.textContent = randomNum2;
+    mylabel3.textContent = randomNum3;
+}
