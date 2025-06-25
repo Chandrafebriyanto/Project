@@ -1,5 +1,5 @@
 /* note: import font */
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* note: all style */
 * {
@@ -38,11 +38,12 @@ video {
   filter: drop-shadow(5px 3px 0px #e22863);
 }
 
+/* note: task style */
 .task {
   background-color: rgba(255, 255, 255, 0.4);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  width: 700px;
+  width: 750px;
   max-height: 550px;
   justify-self: center;
   border-radius: 24px;
@@ -54,20 +55,35 @@ video {
   display: none;
 }
 
+/* note: container style */
 .container {
-  height: 400px;
+  margin: 10px 0;
+  max-height: 450px;
   overflow: scroll;
   margin-bottom: 10px;
 }
 
+/* note: task tittle */
 .task .tittle {
-  text-align: center;
+  justify-self: center;
   color: #e22863;
   padding: 2px 0px;
   font-size: 1.5rem;
   font-weight: bold;
+  transition: 0.5s;
+  width: fit-content;
+  margin: 0;
 }
 
+/* note: task tittle hover */
+.task .tittle:hover {
+  color: white;
+  transform: scale(1.1);
+  transition: 0.5s;
+  filter: drop-shadow(4px 2px 0px #e22863);
+}
+
+/* note: task content */
 .container-task {
   background-color: #ce3456;
   width: 90%;
@@ -84,6 +100,11 @@ video {
   cursor: pointer;
   transition: 0.5s;
   box-shadow: 0px 0px 15px 2px rgba(247, 247, 247, 0.7);
+}
+
+.container-task:hover:active{
+  background-color: #a72944;
+  transform: scale(1);
 }
 
 .content {
@@ -104,12 +125,124 @@ video {
   text-align: right;
 }
 
+.detail-task {
+  /* note: display */
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.585);
+  z-index: 99;
+  overflow: hidden;
+}
+
+.detail-task-content {
+  width: 700px;
+  height: 675px;
+  background-color: white;
+  margin: 30px;
+  justify-self: center;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 5px 5px 0px 0px #e22863;
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  height: 31.1px;
+}
+
+.details {
+  color: #ce3456;
+  font-size: 1.3rem;
+}
+
+.headline .back {
+  font-size: 0.8rem;
+  border: none;
+  background-color: #ce3456;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.headline .back:hover {
+  background-color: white;
+  transform: scale(1.2);
+  color: #e22863;
+  border: 1px solid #e22863;
+  box-shadow: 2px 2px 0px #ce3456;
+  transition: 0.5s;
+}
+.headline .back:hover:active{
+  background-color: #a72944;
+  transform: scale(1.19);
+  transition: 0.1s;
+  color: white;
+  border: none;
+  box-shadow: none;
+}
+
+.content-details {
+  display: inline;
+}
+
+.content-tittle {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-family: "roboto";
+  color: #ce3456;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.box {
+  margin: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow: scroll;
+  border: 2px solid #ce3456;
+  border-radius: 10px;
+  padding: 11px;
+  font-family: "roboto";
+  color: black;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+.submit {
+  position: relative;
+  margin-top: 50px;
+  padding: 10px;
+  width: 100%;
+  background-color: #ce3456;
+  color: white;
+  border: none;
+  bottom: 0;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.submit:active {
+  background-color: #a72944;
+  transform: scale(0.95);
+  transition: 0.1s;
+}
+
+
 /* ************************************************************************* */
 /* note: style footer */
 footer {
   background-color: rgb(204, 5, 5);
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   right: 0;
   font-size: 14px;
@@ -151,6 +284,18 @@ footer {
   .marquee {
     animation: scroll-left-phone 20s linear infinite;
   }
+  .detail-task-content {
+    width: 350px;
+    height: 700px;
+  }
+  .box {
+    max-height: 280px;
+    font-size: 1.2rem;
+  }
+  .submit {
+    margin-top: 50px;
+    font-size: 1rem;
+  }
 }
 
 /* note: scrolling animated */
@@ -170,16 +315,3 @@ footer {
     transform: translateX(-355%);
   }
 }
-
-/* note:scroll animation */
-/* @keyframes animate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
