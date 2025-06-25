@@ -1,0 +1,182 @@
+/* note: import font */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/* note: all style */
+* {
+  box-sizing: border-box;
+}
+
+/* note: style body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+  background-color: #000;
+  color: #fff;
+}
+
+/* note: hidden scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* note: style video */
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* note: style heading-text */
+.heading-text {
+  color: white;
+  text-align: center;
+  filter: drop-shadow(5px 3px 0px #e22863);
+}
+
+.task {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  width: 700px;
+  max-height: 550px;
+  justify-self: center;
+  border-radius: 24px;
+  padding: 10px;
+  box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.7);
+}
+
+
+
+.container {
+  height: 400px;
+  overflow-x: hidden;
+  margin-bottom: 10px;
+}
+
+.task .tittle {
+  text-align: center;
+  color: #e22863;
+  padding: 2px 0px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container-task {
+  background-color: #ce3456;
+  width: 90%;
+  justify-self: center;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+
+.container-task:hover {
+  background-color: #e22863;
+  transform: scale(1.1);
+  margin: 25px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  font-family: "roboto";
+}
+
+.content .task-tittle {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.content .dateline {
+  font-size: 1rem;
+  text-align: right;
+}
+
+/* ************************************************************************* */
+/* note: style footer */
+footer {
+  background-color: rgb(204, 5, 5);
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  right: 0;
+  font-size: 14px;
+  color: #fff;
+  text-align: right;
+}
+
+/* note: style marquee container */
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* note: style marquee */
+.marquee {
+  padding: 5px 0px;
+  animation: scroll-left 20s linear infinite;
+}
+
+/* note: style marquee span */
+.marquee span {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+}
+
+/* note:media query */
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 75%;
+  }
+  .task {
+    width: 350px;
+    max-height: 600px;
+  }
+  .container {
+    height: 500px;
+  }
+  .marquee {
+    animation: scroll-left-phone 20s linear infinite;
+  }
+}
+
+/* note: scrolling animated */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-230%);
+  }
+}
+@keyframes scroll-left-phone {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-355%);
+  }
+}
+
+/* note:scroll animation */
+/* @keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
