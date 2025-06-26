@@ -135,6 +135,8 @@ video {
   background-color: rgba(0, 0, 0, 0.585);
   z-index: 99;
   overflow: hidden;
+  animation: opacity 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .detail-task-content {
@@ -146,6 +148,8 @@ video {
   border-radius: 30px;
   padding: 30px;
   box-shadow: 5px 5px 0px 0px #e22863;
+  animation: slide-in 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .headline {
@@ -230,10 +234,20 @@ video {
   transition: 0.5s;
 }
 
-.submit:active {
+.submit:hover {
+  background-color: white;
+  color: #e22863;
+  border: 1px solid #e22863;
+  box-shadow: 2px 2px 0px #ce3456;
+  transition: 0.5s;
+}
+
+.submit:hover:active {
   background-color: #a72944;
-  transform: scale(0.95);
   transition: 0.1s;
+  color: white;
+  border: none;
+  box-shadow: none;
 }
 
 
@@ -298,7 +312,7 @@ footer {
   }
 }
 
-/* note: scrolling animated */
+/* note: animated */
 @keyframes scroll-left {
   0% {
     transform: translateX(100%);
@@ -315,3 +329,29 @@ footer {
     transform: translateX(-355%);
   }
 }
+@keyframes slide-in{
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0)  ;
+  }
+}
+@keyframes opacity{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes slide-out{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(100%);
+  }
+}
+
+
