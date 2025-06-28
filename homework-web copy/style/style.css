@@ -1,0 +1,357 @@
+/* note: import font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* note: all style */
+* {
+  box-sizing: border-box;
+}
+
+/* note: style body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+  background-color: #000;
+  color: #fff;
+}
+
+/* note: hidden scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* note: style video */
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* note: style heading-text */
+.heading-text {
+  color: white;
+  text-align: center;
+  filter: drop-shadow(5px 3px 0px #e22863);
+}
+
+/* note: task style */
+.task {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  width: 750px;
+  max-height: 550px;
+  justify-self: center;
+  border-radius: 24px;
+  padding: 10px;
+  box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.7);
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* note: container style */
+.container {
+  margin: 10px 0;
+  max-height: 450px;
+  overflow: scroll;
+  margin-bottom: 10px;
+}
+
+/* note: task tittle */
+.task .tittle {
+  justify-self: center;
+  color: #e22863;
+  padding: 2px 0px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: 0.5s;
+  width: fit-content;
+  margin: 0;
+}
+
+/* note: task tittle hover */
+.task .tittle:hover {
+  color: white;
+  transform: scale(1.1);
+  transition: 0.5s;
+  filter: drop-shadow(4px 2px 0px #e22863);
+}
+
+/* note: task content */
+.container-task {
+  background-color: #ce3456;
+  width: 90%;
+  justify-self: center;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+
+.container-task:hover {
+  background-color: #e22863;
+  transform: scale(1.1);
+  margin: 25px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px 0px 15px 2px rgba(247, 247, 247, 0.7);
+}
+
+.container-task:hover:active{
+  background-color: #a72944;
+  transform: scale(1);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  font-family: "roboto";
+}
+
+.content .task-tittle {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.content .dateline {
+  font-size: 1rem;
+  text-align: right;
+}
+
+.detail-task {
+  /* note: display */
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.585);
+  z-index: 99;
+  overflow: hidden;
+  animation: opacity 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.detail-task-content {
+  width: 700px;
+  height: 675px;
+  background-color: white;
+  margin: 30px;
+  justify-self: center;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 5px 5px 0px 0px #e22863;
+  animation: slide-in 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  height: 31.1px;
+}
+
+.details {
+  color: #ce3456;
+  font-size: 1.3rem;
+}
+
+.headline .back {
+  font-size: 0.8rem;
+  border: none;
+  background-color: #ce3456;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.headline .back:hover {
+  background-color: white;
+  transform: scale(1.2);
+  color: #e22863;
+  border: 1px solid #e22863;
+  box-shadow: 2px 2px 0px #ce3456;
+  transition: 0.5s;
+}
+.headline .back:hover:active{
+  background-color: #a72944;
+  transform: scale(1.19);
+  transition: 0.1s;
+  color: white;
+  border: none;
+  box-shadow: none;
+}
+
+.content-details {
+  display: inline;
+}
+
+.content-tittle {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-family: "roboto";
+  color: #ce3456;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.box {
+  margin: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow: scroll;
+  border: 2px solid #ce3456;
+  border-radius: 10px;
+  padding: 11px;
+  font-family: "roboto";
+  color: black;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+.submit {
+  position: relative;
+  margin-top: 50px;
+  padding: 10px;
+  width: 100%;
+  background-color: #ce3456;
+  color: white;
+  border: none;
+  bottom: 0;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.submit:hover {
+  background-color: white;
+  color: #e22863;
+  border: 1px solid #e22863;
+  box-shadow: 2px 2px 0px #ce3456;
+  transition: 0.5s;
+}
+
+.submit:hover:active {
+  background-color: #a72944;
+  transition: 0.1s;
+  color: white;
+  border: none;
+  box-shadow: none;
+}
+
+
+/* ************************************************************************* */
+/* note: style footer */
+footer {
+  background-color: rgb(204, 5, 5);
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  font-size: 14px;
+  color: #fff;
+  text-align: right;
+}
+
+/* note: style marquee container */
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* note: style marquee */
+.marquee {
+  padding: 5px 0px;
+  animation: scroll-left 20s linear infinite;
+}
+
+/* note: style marquee span */
+.marquee span {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+}
+
+/* note:media query */
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 75%;
+  }
+  .task {
+    width: 350px;
+    max-height: 600px;
+  }
+  .container {
+    height: 500px;
+  }
+  .marquee {
+    animation: scroll-left-phone 20s linear infinite;
+  }
+  .detail-task-content {
+    width: 350px;
+    height: 700px;
+  }
+  .box {
+    max-height: 280px;
+    font-size: 1.2rem;
+  }
+  .submit {
+    margin-top: 50px;
+    font-size: 1rem;
+  }
+}
+
+/* note: animated */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-230%);
+  }
+}
+@keyframes scroll-left-phone {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-355%);
+  }
+}
+@keyframes slide-in{
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0)  ;
+  }
+}
+@keyframes opacity{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes slide-out{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(100%);
+  }
+}
+
+
