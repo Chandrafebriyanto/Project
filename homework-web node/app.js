@@ -2,6 +2,7 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts'); 
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
+const task = require('./models/taskWebApp');
 
 // Middleware
 const methodOverride = require('method-override');
@@ -12,7 +13,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 
 // MongoDB connection
-mongoose.connect('mongodb://127.0.0.1:27017/nama-db', {
+mongoose.connect('mongodb://127.0.0.1:27017/task-web-app', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
