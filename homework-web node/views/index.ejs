@@ -1,0 +1,116 @@
+<!-- background Video -->
+<div class="bg-video">
+  <video autoplay muted loop>
+    <source src="bg-japan.mp4" type="video/mp4" />
+  </video>
+  <div class="bg-video-overlay mt-5 text-center">
+    <!-- heading -->
+    <h1 class="heading-text">Information Web Programming Class</h1>
+  </div>
+</div>
+
+<!-- *************************************************************************** -->
+<!-- Content Task -->
+<div class="task mt-5">
+  <p class="tittle">HomeWork</p>
+  <div class="container">
+    <div class="container-task" onclick="detailTask()">
+      <div class="content">
+        <p class="task-tittle">Membuat Website dengan NodeJS dan Bootstrap</p>
+        <p class="dateline">2025-05-26: 00.00</p>
+      </div>
+    </div>
+    <div class="container-task" onclick="detailTask()">
+      <div class="content">
+        <p class="task-tittle">Membuat Website dengan NodeJS dan Bootstrap</p>
+        <p class="dateline">2025-05-26: 00.00</p>
+      </div>
+    </div>
+    <div class="container-task" onclick="detailTask()">
+      <div class="content">
+        <p class="task-tittle">Membuat Website dengan NodeJS dan Bootstrap</p>
+        <p class="dateline">2025-05-26: 00.00</p>
+      </div>
+    </div>
+    <div class="container-task" onclick="detailTask()">
+      <div class="content">
+        <p class="task-tittle">Membuat Website dengan NodeJS dan Bootstrap</p>
+        <p class="dateline">2025-05-26: 00.00</p>
+      </div>
+    </div>
+    <div class="container-task" onclick="detailTask()">
+      <div class="content">
+        <p class="task-tittle">Membuat Website dengan NodeJS dan Bootstrap</p>
+        <p class="dateline">2025-05-26: 00.00</p>
+      </div>
+    </div>
+    <div class="container-task" onclick="detailTask()">
+      <div class="content">
+        <p class="task-tittle">Membuat Website dengan NodeJS dan Bootstrap</p>
+        <p class="dateline">2025-05-26: 00.00</p>
+      </div>
+    </div>
+    <div class="container-task" onclick="detailTask()">
+      <div class="content">
+        <p class="task-tittle">Membuat Website dengan NodeJS dan Bootstrap</p>
+        <p class="dateline">2025-05-26: 00.00</p>
+      </div>
+    </div>
+    <div class="container-task" onclick="detailTask()">
+      <div class="content">
+        <p class="task-tittle">Membuat Website dengan NodeJS dan Bootstrap</p>
+        <p class="dateline">2025-05-26: 00.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- *************************************************************************** -->
+<!-- detail task -->
+<div id="detail-task" class="detail-task">
+  <div class="detail-task-content">
+    <div class="headline">
+      <p class="details">Details</p>
+      <button class="back">Back</button>
+    </div>
+    <div class="content-details">
+      <p class="content-tittle">Name Task:</p>
+      <div class="box">Membuat Website dengan NodeJS dan Bootstrap</div>
+      <p class="content-tittle">Dateline:</p>
+      <div class="box">2025-10-24: 23.59</div>
+      <p class="content-tittle">Describe:</p>
+      <div class="box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, saepe?
+        Rerum nisi dignissimos harum, quae odit porro. Iure eos, autem molestiae
+        vero ab aperiam repudiandae recusandae, delectus qui incidunt ipsa.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, vitae hic
+        omnis cumque beatae exercitationem repudiandae nam, velit doloremque
+        suscipit facere eligendi nesciunt qui vel error, consequuntur neque
+        deserunt minus.Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Dolore, saepe? Rerum nisi dignissimos harum, quae odit porro. Iure eos,
+        autem molestiae vero ab aperiam repudiandae recusandae, delectus qui
+        incidunt ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quia, vitae hic omnis cumque beatae exercitationem repudiandae nam,
+        velit doloremque suscipit facere eligendi nesciunt qui vel error,
+        consequuntur neque deserunt minus.
+      </div>
+    </div>
+    <button type="submit" class="submit">Send Link</button>
+  </div>
+</div>
+
+<!-- *************************************************************************** -->
+<!-- footer -->
+
+<!-- *************************************************************************** -->
+<script>
+  // note: click task
+  const detailTask = () => {
+    document.getElementById("detail-task").style.display = "block";
+  };
+
+  // note: button back
+  document.querySelector(".back").addEventListener("click", () => {
+    document.getElementById("detail-task").style.display = "none";
+  });
+</script>

@@ -1,0 +1,75 @@
+-- BACKEND --
+----------------------------------------------------------------
+1. buat file entry point dengan nama app.js
+2. lakukan instalasi package node, dengan mengetik: npm init -y
+3. install modul express, dengan ketik: npm i express
+4. buat konfigurasi awal di entry point
+   berikut konfigurasi awal:
+
+   const express = require('express')
+   const app = express()
+   const port = 3000
+
+   app.get('/', (req, res) => {
+     res.send('Hello World!')
+   })
+
+   app.listen(port, () => {
+     console.log(`Server Running In http://localhost:${port}`)
+   })
+
+5. install modul mongoDB, dengan ketik: npm i mongoose
+6. hubungkan mongoDB di entry point
+   berikut konfigurasi mongoDB:
+
+   const mongoose = require('mongoose')
+   mongoose.connect('mongodb://localhost:27017/fullstack_db', {
+     useNewUrlParser: true,
+     useUnifiedTopology: true,
+   })
+
+   const db = mongoose.connection
+   db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+   db.once('open', () => {
+     console.log('Connected to MongoDB')
+   })
+
+7. buat folder baru dengan nama models untuk skema database
+8. import mongoose di file userModel.js
+9. membuat skema database di file userModel.js seperti berikut:
+   const mongoose = require('mongoose')
+
+   const user = mongoose.Schema({
+       subject: {
+           type: String,
+           required: true,
+       },
+       description: {
+           type: String,
+           required: true,
+       },
+       dateline: {
+           type: Date,
+           required: true,
+       },
+   })
+
+10. kemudian export userModel dengan mengetik: module.exports = user
+11. membuat folder untuk controller dengan nama utils, tambahkan file usercontroler.js di dalamnya
+12. import model mongoDB dan tambahkan connection ke databasenya
+
+    import user  from "../models/userModel";
+    export const getUsers = async (req,res) => {
+        try {
+            const users = await user.find()
+            res.json(users)
+        } catch (error) {
+            res.status(500).json({message: error.message})
+        }
+    }
+
+13. membuat folder routes dengan nama file userRoute.js
+
+
+-- FRONTEND --
+----------------------------------------------------------------
