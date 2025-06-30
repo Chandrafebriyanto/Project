@@ -1,1 +1,35 @@
-<h1>ini tampilan task</h1>
+<!-- heading -->
+<div class="bg-video-overlay mt-5 text-center">
+  <h1 class="heading-text">Form Input Task</h1>
+</div>
+
+<div class="table-container">
+  <p class="text-center">Task</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Tittle</th>
+        <th>Dateline</th>
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% tasks.forEach((task, i) => { %>
+        <tr>
+          <td><%= i +1 %></td>
+          <td><%= task.tittle %></td>
+          <td><%= task.dateline.toDateString() %></td>
+          <td>
+              <a href="" class="btn btn-primary badge">Edit</a>
+              <a href="" class="btn btn-danger badge ms-2">Delete</a>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <a href="" class="btn btn-primary mb-2 mt-5" style="background: #ce3456; border: none;">Tambah Data Contact</a>
+</div>
+
+<a href="">Refresh</a>
+

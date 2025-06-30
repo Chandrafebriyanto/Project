@@ -1,5 +1,5 @@
 /* note: import font */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* note: all style */
 * {
@@ -102,7 +102,7 @@ video {
   box-shadow: 0px 0px 15px 2px rgba(247, 247, 247, 0.7);
 }
 
-.container-task:hover:active{
+.container-task:hover:active {
   background-color: #a72944;
   transform: scale(1);
 }
@@ -141,7 +141,7 @@ video {
 
 .detail-task-content {
   width: 700px;
-  height: 675px;
+  max-height: 675px;
   background-color: white;
   margin: 30px;
   justify-self: center;
@@ -181,7 +181,7 @@ video {
   box-shadow: 2px 2px 0px #ce3456;
   transition: 0.5s;
 }
-.headline .back:hover:active{
+.headline .back:hover:active {
   background-color: #a72944;
   transform: scale(1.19);
   transition: 0.1s;
@@ -250,6 +250,29 @@ video {
   box-shadow: none;
 }
 
+.table-container {
+  justify-self: center;
+  width: fit-content;
+  padding: 20px;
+  background-color: #a72944;
+  border-radius: 10px;
+}
+
+.table {
+  margin: 0;
+  font-family: "roboto";
+  justify-self: center;
+  padding: 10px;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.table thead tr th,
+.table tbody tr th,
+.table tbody tr td {
+  background: transparent;
+  color: white;
+}
 
 /* ************************************************************************* */
 /* note: style footer */
@@ -329,29 +352,27 @@ footer {
     transform: translateX(-355%);
   }
 }
-@keyframes slide-in{
-  from{
+@keyframes slide-in {
+  from {
     transform: translateY(100%);
   }
-  to{
-    transform: translateY(0)  ;
+  to {
+    transform: translateY(0);
   }
 }
-@keyframes opacity{
-  from{
+@keyframes opacity {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
-@keyframes slide-out{
-  from{
+@keyframes slide-out {
+  from {
     transform: translateY(0);
   }
-  to{
+  to {
     transform: translateY(100%);
   }
 }
-
-

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Information Web Programming Class</title>
+    <title><%- title %></title>
     <!-- *************************************************************************** -->
     <!-- link bootstrap -->
     <link
@@ -25,6 +25,12 @@
     <!-- *************************************************************************** -->
   </head>
   <body>
+    <!-- background Video -->
+    <div class="bg-video">
+      <video autoplay muted loop>
+        <source src="bg-japan.mp4" type="video/mp4" />
+      </video>
+    </div>
     <%- body %>
   </body>
   <footer>

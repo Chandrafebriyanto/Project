@@ -19,3 +19,7 @@ const task = mongoose.model("task", {
   },
 
 });
+
+module.exports = task;
+
+// note: task= nama collection -> masuk di index.js (di require)
