@@ -1,10 +1,4 @@
-<!-- heading -->
-<div class="bg-video-overlay mt-5 text-center">
-  <h1 class="heading-text">Form Input Task</h1>
-</div>
-
 <div class="table-container">
-  <p class="text-center">Task</p>
   <table class="table">
     <thead>
       <tr>
@@ -16,20 +10,22 @@
     </thead>
     <tbody>
       <% tasks.forEach((task, i) => { %>
-        <tr>
-          <td><%= i +1 %></td>
-          <td><%= task.tittle %></td>
-          <td><%= task.dateline.toDateString() %></td>
-          <td>
-              <a href="" class="btn btn-primary badge">Edit</a>
-              <a href="" class="btn btn-danger badge ms-2">Delete</a>
-          </td>
-        </tr>
+      <tr>
+        <td><%= i +1 %></td>
+        <td><%= task.tittle %></td>
+        <td><%= task.dateline.toDateString() %></td>
+        <td>
+          <a href="/task/edit/<%= task.id %>" class="btn btn-primary badge">Edit</a>
+          <a href="/task/delete/<%= task.id %>" class="btn btn-danger badge ms-2">Delete</a>
+        </td>
+      </tr>
       <% }) %>
     </tbody>
   </table>
-  <a href="" class="btn btn-primary mb-2 mt-5" style="background: #ce3456; border: none;">Tambah Data Contact</a>
+  <a
+    href="/task/create"
+    class="btn btn-primary mb-2 mt-5"
+    style="background: #ce3456; border: none"
+    >Tambah Data Contact</a
+  >
 </div>
-
-<a href="">Refresh</a>
-

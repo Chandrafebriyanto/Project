@@ -1,0 +1,35 @@
+<div class="table-container">
+  <form action="/task?_method=PUT" method="POST">
+    <div class="mb-3">
+      <label for="name" class="form-label">Tittle</label>
+      <input type="text" class="form-control" id="tittle" name="tittle" />
+    </div>
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Dateline</label>
+      <input
+        type="datetime-local"
+        class="form-control"
+        id="dateline"
+        name="dateline"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        name="description"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Link</label>
+      <input type="text" class="form-control" id="link" name="link" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

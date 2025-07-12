@@ -13,6 +13,7 @@ body {
   font-family: "Press Start 2P", cursive;
   background-color: #000;
   color: #fff;
+  font-size: 1rem;
 }
 
 /* note: hidden scrollbar */
@@ -256,6 +257,8 @@ video {
   padding: 20px;
   background-color: #a72944;
   border-radius: 10px;
+  font-family: 'roboto';
+  width: 750px;
 }
 
 .table {
@@ -323,7 +326,7 @@ footer {
   }
   .detail-task-content {
     width: 350px;
-    height: 700px;
+    max-height: 700px;
   }
   .box {
     max-height: 280px;
@@ -332,6 +335,10 @@ footer {
   .submit {
     margin-top: 50px;
     font-size: 1rem;
+  }
+  .table-container{
+    width: 350px;
+    font-size: 3rem;
   }
 }
 
