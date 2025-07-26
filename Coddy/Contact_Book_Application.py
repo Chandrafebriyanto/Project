@@ -1,3 +1,5 @@
+contact_book = {"Bob": {"phone": "234-567-8901", "email": "bob@example.com", "address": "456 Oak Ave"}}
+
 def display_menu():
     print("""Contact Book Menu:
 1. Add Contact
@@ -10,7 +12,7 @@ def display_menu():
     while True:
         choice = input()
         if choice == '1':
-            add_contact({"Bob": {"phone": "234-567-8901", "email": "bob@example.com", "address": "456 Oak Ave"}})
+            add_contact(contact_book)
         elif choice == '2':
             view_contact()
         elif choice == '3':
@@ -25,18 +27,16 @@ def display_menu():
         else:
             print("Invalid choice. Please try again.")
 
-
 def add_contact(contact_book):
     name = input()
     phone = input()
     email = input()
     address = input()
-    contact_book[name] = {"phone": phone, "email": email, "address": address}
-    if name not in contact_book:
-        print(f"Contact {name} added successfully.")
-    else:
-        print(f"Contact {name} already exists.")
-
     
+    if name in contact_book:
+        print(f"Contact already exists!")
+    else:
+        contact_book[name] = {"phone": phone, "email": email, "address": address}
+        print(f"Contact added successfully!")
     
 display_menu()
