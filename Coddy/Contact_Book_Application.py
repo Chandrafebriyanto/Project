@@ -14,13 +14,13 @@ def display_menu():
         if choice == '1':
             add_contact(contact_book)
         elif choice == '2':
-            view_contact()
+            view_contact(contact_book)
         elif choice == '3':
-            edit_contact()
+            edit_contact(contact_book)
         elif choice == '4':
-            delete_contact()
+            delete_contact(contact_book)
         elif choice == '5':
-            list_contacts()
+            list_contacts(contact_book)
         elif choice == '6':
             print("Exiting the Contact Book.")
             break
@@ -38,5 +38,25 @@ def add_contact(contact_book):
     else:
         contact_book[name] = {"phone": phone, "email": email, "address": address}
         print(f"Contact added successfully!")
+
+def view_contact(contact_book):
+    name = input()
+    if name in contact_book:
+        print(f"Name: {name}")
+        for key, Value in contact_book[name].items():
+            key = key.capitalize()
+            print(f"{key}: {Value}")
+    else: 
+        print("Contact not found!")
+        
+def edit_contact(contact_book):
+    print("Comming Soon")
+
+def delete_contact(contact_book):
+    print("Comming Soon")
     
+def list_contacts(contact_book):
+    print("Comming Soon")
+
+
 display_menu()
