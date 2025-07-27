@@ -10,6 +10,7 @@ grades = {
 # Step 2: Access All Keys and Values
 print("Students:", grades.keys())  # Accessing all keys
 print("Grades:", grades.values())  # Accessing all values
+print("Group:", grades.items())  # Accessing all values
 
 # Step 3: Add a New Student
 grades["Diana"] = 92  
