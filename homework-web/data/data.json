@@ -1,0 +1,19 @@
+{
+    "tasks":{
+        "task1": {
+            "description": "Implement a function to calculate the factorial of a number.",
+            "difficulty": "easy",
+            "tags": ["math", "recursion"]
+        },
+        "task2": {
+            "description": "Create a REST API using Flask.",
+            "difficulty": "medium",
+            "tags": ["web", "api", "flask"]
+        },
+        "task3": {
+            "description": "Build a simple to-do list application with React.",
+            "difficulty": "hard",
+            "tags": ["web", "frontend", "react"]
+        }
+    }
+}
